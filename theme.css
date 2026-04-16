@@ -1,3 +1,5 @@
+@charset "UTF-8";@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,500;1,400;1,500&family=Karla:ital,wght@0,400;0,600;1,400;1,600&family=Rubik:ital,wght@0,400;0,600;1,400;1,600&display=swap");
+
 /** ------------------------------------------------------------------
 **      ________            _____             ________                 
 **      ___  __ \_____________  /________________  __/________________ 
@@ -7,12 +9,9 @@
 **                                                                     
 **  —— Made with 💎 by Dr. Ronald Joe Record
 ** ------------------------------------------------------------------- */
-
-@charset "UTF-8";@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,500;1,400;1,500&family=Karla:ital,wght@0,400;0,600;1,400;1,600&family=Rubik:ital,wght@0,400;0,600;1,400;1,600&display=swap");
-
-/*-----------------------------*/
-/*          Typography         */
-/*-----------------------------*/
+/*------------- --------------------*/
+/*          Typography              */
+/*------------- --------------------*/
 /*-----------------------------*/
 /*          Colors             */
 /*-----------------------------*/
@@ -25,8 +24,8 @@ settings:
         id: doctorfree-typography
         title: Colors
         type: heading
-        level: 2
-        collapsed: true
+        level: 3
+        collapsed: false
     -
         id: text-bold-color
         title: Bold Color
@@ -46,451 +45,306 @@ settings:
         format: hex
         default: '#b380fb'
     - 
-        id: text-accent
+        id: accent
         title: Accent Color
         type: variable-color
-        format: hex
-        default: '#ffeb95'
-    - 
-        id: text-accent-hover
-        title: Hover Accent Color
-        type: variable-color
-        format: hex
-        default: '#8be9fd'
-    - 
-        id: text-sub-accent
-        title: Sub Accent Color
-        type: variable-color
-        format: hex
-        default: '#f4569d'
-    - 
-        id: background-primary
-        title: Background Color
-        type: variable-color
-        format: hsl
-        opacity: false
-        default: hsl(207deg, 95%, 5%)
-    - 
-        id: background-primary-alt
-        title: Alternate Background Color
-        type: variable-color
-        format: hsl
-        opacity: false
-        default: 'hsl(210deg, 95%, 6%)'
-    - 
-        id: background-secondary
-        title: Secondary Background Color
-        type: variable-color
-        format: hsl
-        opacity: false
-        default: 'hsl(200deg, 95%, 5%)'
-    - 
-        id: background-secondary-alt
-        title: Alternate Secondary Background Color
-        type: variable-color
-        format: hsl
-        opacity: false
-        default: 'hsl(203deg, 95%, 6%)'
-    - 
-        id: background-accent
-        title: Accent Background Color
-        type: variable-color
-        format: rgb
-        opacity: true
-        default: 'rgba(14, 210, 247, 0.25)'
+        format: hsl-split
+        default: '#007AFF'
     - 
         id: text-highlight-bg
         title: Highlight Color
-        type: variable-color
+        type: variable-themed-color
         format: rgb
         opacity: true
-        default: 'hsla(61deg, 100%, 32%, 0.8)'
-    - 
-        id: text-normal
-        title: Text Normal Color
-        type: variable-color
-        format: hex
-        default: '#f8f8f2'
+        default-light: 'rgba(255, 224, 0, 0.5)'
+        default-dark: 'rgba(255, 177, 80, 0.3)'
     - 
         id: text-selection
         title: Text Selection Background Color
-        type: variable-color
-        format: hex
-        default: '#6272a4'
-    - 
-        id: text-muted
-        title: Text Muted Color
-        type: variable-color
-        format: hex
-        default: '#f8f8f2'
-    - 
-        id: text-faint
-        title: Text Faint Color
-        type: variable-color
-        format: hex
-        default: '#7fdbca'
-    - 
-        id: interactive-accent
-        title: Interactive Accent Background Color
-        type: variable-color
-        format: rgb
+        type: variable-themed-color
+        format: hsl
         opacity: true
-        default: 'rgba(14, 210, 247, 0.5)'
+        default-light: 'hsla(0, 0%, 0%, 0.08)'
+        default-dark: 'hsla(211, 100%, 42%, 0.3)'
     - 
-        id: interactive-accent-hover
-        title: Interactive Accent Hover Color
-        type: variable-color
-        format: rgb
-        opacity: true
-        default: 'rgba(14, 210, 247, 0.8)'
-    - 
-        id: table-border-color
-        title: Table Border Color
-        type: variable-color
+        id: strong-color
+        title: Bold Color
+        type: variable-themed-color
         format: hex
-        default: '#f8f8f2'
+        default-light: '#1a1a1a'
+        default-dark: '#bababa'
     - 
-        id: text-title-h1
-        title: Heading 1 Color
-        type: variable-color
+        id: em-color
+        title: Italic Color
+        type: variable-themed-color
         format: hex
-        default: '#ff79c6'
+        default-light: '#1a1a1a'
+        default-dark: '#bababa'
     - 
-        id: text-title-h2
-        title: Heading 2 Color
-        type: variable-color
+        id: h1-color
+        title: H1 Color
+        type: variable-themed-color
         format: hex
-        default: '#82aaff'
+        opacity: false
+        default-light: '#1f1f1f'
+        default-dark: '#bababa'
     - 
-        id: text-title-h3
-        title: Heading 3 Color
-        type: variable-color
+        id: h2-color
+        title: H2 Color
+        type: variable-themed-color
         format: hex
-        default: '#c5e478'
+        opacity: false
+        default-light: '#1f1f1f'
+        default-dark: '#bababa'
     - 
-        id: text-title-h4
-        title: Heading 4 Color
-        type: variable-color
+        id: h3-color
+        title: H3 Color
+        type: variable-themed-color
         format: hex
-        default: '#ffb86c'
+        opacity: false
+        default-light: '#1f1f1f'
+        default-dark: '#bababa'
     - 
-        id: text-title-h5
-        title: Heading 5 Color
-        type: variable-color
+        id: h4-color
+        title: H4 Color
+        type: variable-themed-color
         format: hex
-        default: '#50fa7b'
+        opacity: false
+        default-light: '#1f1f1f'
+        default-dark: '#bababa'
     - 
-        id: text-title-h6
-        title: Heading 6 Color
-        type: variable-color
+        id: h5-color
+        title: H5 Color
+        type: variable-themed-color
         format: hex
-        default: '#8be9fd'
+        opacity: false
+        default-light: '#1f1f1f'
+        default-dark: '#bababa'
     - 
-        id: inline-code
-        title: "Inline Code Color"
-        type: variable-color
+        id: h6-color
+        title: H6 Color
+        type: variable-themed-color
         format: hex
-        default: '#bd93f9'
+        opacity: false
+        default-light: '#1f1f1f'
+        default-dark: '#bababa'
     - 
-        id: code-block
-        title: "Code Block Color"
-        type: variable-color
+        id: code-color
+        title: Indent Code Color
+        type: variable-themed-color
         format: hex
-        default: '#8be9fd'
-    - 
-        id: pre-code
-        title: "Inline Code Color"
-        type: variable-color
-        format: hex
-        default: '#44475a'
-    - 
-        id: vim-cursor
-        title: "Vim Cursor Color"
-        type: variable-color
-        format: hex
-        default: '#ff5555'
-    - 
-        id: border-color
-        title: "Border Color"
-        type: variable-color
-        format: hex
-        default: '#2b2727'
-    - 
-        id: border-color-alt
-        title: "Alternate Border Color"
-        type: variable-color
-        format: hex
-        default: '#101014'
-    - 
-        id: white
-        title: "White Color"
-        type: variable-color
-        format: hex
-        default: '#F8F8F3'
-    - 
-        id: gray-1
-        title: "Gray 1 Color"
-        type: variable-color
-        format: hex
-        default: '#586e75'
-    - 
-        id: gray-2
-        title: "Gray 2 Color"
-        type: variable-color
-        format: hex
-        default: '#D5D4DE'
-    - 
-        id: red
-        title: "Red Color"
-        type: variable-color
-        format: hex
-        default: '#FF5555'
-    - 
-        id: orange
-        title: "Orange Color"
-        type: variable-color
-        format: hex
-        default: '#FE9580'
-    - 
-        id: green
-        title: "Green Color"
-        type: variable-color
-        format: hex
-        default: '#8AFF7F'
-    - 
-        id: cyan
-        title: "Cyan Color"
-        type: variable-color
-        format: hex
-        default: '#81FFEA'
-    - 
-        id: cyan-transparent
-        title: "Cyan Transparent Color"
-        type: variable-color
-        format: rgb
-        opacity: true
-        default: 'rgba(129, 255, 234, 0.3)'
-    - 
-        id: purple
-        title: "Purple Color"
-        type: variable-color
-        format: hex
-        default: '#9580FF'
-    - 
-        id: purple-transparent
-        title: "Purple Transparent Color"
-        type: variable-color
-        format: rgb
-        opacity: true
-        default: 'rgba(149, 128, 255, 0.5)'
-    - 
-        id: pink
-        title: "Pink Color"
-        type: variable-color
-        format: hex
-        default: '#FE7FBF'
-    - 
-        id: blue
-        title: "Blue Color"
-        type: variable-color
-        format: hex
-        default: '#00588E'
-    - 
-        id: lavender
-        title: "Lavender Color"
-        type: variable-color
-        format: hex
-        default: '#b380fb'
-    - 
-        id: yellow
-        title: "Yellow Color"
-        type: variable-color
-        format: hex
-        default: '#FEFF7F'
+        opacity: false
+        default-light: '#1f1f1f'
+        default-dark: '#bababa'
 
     - 
         id: custom-fonts
         title: Fonts
         type: heading
-        level: 2
+        level: 3
         collapsed: true
     - 
-        id: font-text-size
-        title: Font Size
-        description: The font size in pixels
-        type: variable-number
-        format: px
-        default: 18
-    - 
-        id: font-size-normal
-        title: Normal Font Size
-        description: The normal font size in pixels
-        type: variable-number
-        format: px
-        default: 18
-    - 
-        id: code-size
-        title: "Code Font Size"
-        description: "The code font size in pixels"
-        type: variable-number
-        format: px
-        default: 16
-    - 
-        id: nav-item-size
-        title: "Nav Item Font Size"
-        description: "The navigation item font size in pixels"
-        type: variable-number
-        format: px
-        default: 18
-    - 
-        id: font-size-side-dock
-        title: Side Dock Font Size
-        description: The side dock font size in pixels
-        type: variable-number
-        format: px
-        default: 18
-    - 
-        id: font-size-side-dock-title
-        title: "Side Dock Title Font Size"
-        description: "The side dock title font size in pixels"
-        type: variable-number
-        format: px
-        default: 18
-    - 
-        id: popover-font-size
-        title: "Pop Over Font Size"
-        description: The popup window font size in pixels
-        type: variable-number
-        format: px
-        default: 14
-    - 
-        id: vault-name-font-size
-        title: "Vault Name Font Size"
-        description: The vault name font size in pixels
-        type: variable-number
-        format: px
-        default: 18
-    - 
-        id: font-size-status-bar
-        title: Status Bar Font Size
-        description: The status bar font size in pixels
-        type: variable-number
-        format: px
-        default: 18
-    - 
-        id: table-header-size
-        title: "Table Header Font Size"
-        description: "The table header font size in pixels"
-        type: variable-number
-        format: px
-        default: 18
-    - 
-        id: font-size-h1
-        title: Heading 1 Font Size
-        description: The Heading 1 font size in pixels
-        type: variable-number
-        format: px
-        default: 30
-    - 
-        id: font-size-h2
-        title: Heading 2 Font Size
-        description: The Heading 2 font size in pixels
-        type: variable-number
-        format: px
-        default: 25
-    - 
-        id: font-size-h3
-        title: Heading 3 Font Size
-        description: The Heading 3 font size in pixels
-        type: variable-number
-        format: px
-        default: 21
-    - 
-        id: font-size-h4
-        title: Heading 4 Font Size
-        description: The Heading 4 font size in pixels
-        type: variable-number
-        format: px
-        default: 20
-    - 
-        id: font-size-h5
-        title: Heading 5 Font Size
-        description: The Heading 5 font size in pixels
-        type: variable-number
-        format: px
-        default: 19
-    - 
-        id: font-size-h6
-        title: Heading 6 Font Size
-        description: The Heading 6 font size in pixels
-        type: variable-number
-        format: px
-        default: 18
-    - 
-        id: font-ui-smaller
-        title: Smaller UI Font Size
-        description: The smaller UI font size in pixels
-        type: variable-number
-        format: px
-        default: 14
-    - 
-        id: font-ui-small
-        title: "Small UI Font Size"
-        description: "The small UI font size in pixels"
-        type: variable-number
-        format: px
-        default: 16
-    - 
-        id: font-ui-medium
-        title: Medium UI Font Size
-        description: The medium UI font size in pixels
-        type: variable-number
-        format: px
-        default: 18
-    - 
-        id: font-ui-large
-        title: Large UI Font Size
-        description: The large UI font size in pixels
-        type: variable-number
-        format: px
-        default: 20
-    - 
-        id: font-family-editor
-        title: Editor Font Family
-        description: Font used for editing
+        id: font-interface-theme
+        title: UI font
+        description: Font used for the user interface
         type: variable-text
-        default: IBM Plex Mono, Menlo, Monaco, "Courier New", monospace
-    - 
-        id: font-text
-        title: "Text Font"
-        description: "Font used for text"
-        type: variable-text
-        default: Karla, "Avenir Next", Helvetica, Arial, sans-serif;
-    - 
-        id: font-family-preview
-        title: Preview Font Family
-        description: Font used for preview
-        type: variable-text
-        default: Karla, "Avenir Next", Helvetica, Arial, sans-serif;
-    - 
-        id: font-family-preview-heading
-        title: Preview Heading Font Family
-        description: Font used for preview heading
-        type: variable-text
-        default: Rubik, "Avenir Next", Helvetica, Arial, sans-serif;
+        default: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif
     -
+        id: default-font-smoothing
+        title: UI font smoothing
+        description: Changes the antialiasing—or crispness—of the UI font
+        type: variable-select
+        default: antialiased
+        options:
+            - auto
+            - antialiased
+            - subpixel-antialiased
+            - none
+    - 
+        id: font-text-theme
+        title: Editor font
+        description: Font used for the editor and preview
+        type: variable-text
+        default: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif
+    -
+        id: editor-font-smoothing
+        title: Editor font smoothing
+        description: Changes the antialiasing—or crispness—of the editor font
+        type: variable-select
+        default: antialiased
+        options:
+            - auto
+            - antialiased
+            - subpixel-antialiased
+            - none
+    -
+        id: editor-font-features
+        title: Editor font features
+        description: 'Enable various features supported by your font, such as ligatures. See: https://developer.mozilla.org/en-US/docs/Web/CSS/font-feature-settings'
+        type: variable-text
+        default: ""
+    - 
+        id: header-editor-font
+        title: Headings font
+        description: Font used for headings in editor and preview
+        type: variable-text
+        default: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif
+    - 
+        id: font-monospace-theme
+        title: Monospace font
+        description: Used for code blocks, front matter, etc
+        type: variable-text
+        default: Menlo, SFMono-Regular, Consolas, "Roboto Mono", monospace
+    - 
+        id: editor-line-height
+        title: Editor line height
+        description: Line height of the editor, expects a decimal value
+        type: variable-number
+        default: 1.88889
+    - 
         id: line-width
         title: Line width
         description: The maximum line width in pixels
         type: variable-number
+        default: 600
         format: px
-        default: 900
+    - 
+        id: normal-weight
+        title: Base font weight
+        type: variable-number
+        default: 400
+    - 
+        id: medium-weight
+        title: Medium font weight
+        type: variable-number
+        default: 500
+    - 
+        id: bold-weight
+        title: Bold font weight
+        type: variable-number
+        default: 600
+
+    -
+        id: misc-title
+        title: Misc
+        type: heading
+        level: 3
+        collapsed: true
+    - 
+        id: cc-show-vault-name
+        title: Show vault name in file explorer
+        type: class-toggle
+    - 
+        id: cc-transparent-popover
+        title: Translucent popovers
+        description: Menus and notifications will take on a translucent background. Turning this setting on might slow down obsidian on some computers.
+        type: class-toggle
+    - 
+        id: scale-small
+        title: Page preview scale
+        description: Percentage amount to scale hover preview and sidebar document font
+        type: variable-number
+        default: 90
+    -
+        id: explorer-wrapping
+        title: File explorer wrapping
+        description: 'By default, files with long names will wrap in the file explorer. This setting ensures each file name only takes up a single line'
+        type: class-select
+        default: none
+        options:
+            - 
+                value: none
+                label: Default
+            - 
+                value: cc-truncated-explorer-titles
+                label: Truncate file titles
+            -
+                value: cc-wrapped-explorer-titles
+                label: Wrap file titles
+    - 
+        id: cc-trim-table-cols
+        title: Truncate table columns
+        description: Prevent table columns from wrapping to a new line in narrow panes
+        type: class-toggle
+    - 
+        id: table-min-cell-width
+        title: Minimum table column width
+        description: Table columns will not strink below this width
+        type: variable-number
+        default: 0
+        format: px
+
+    - 
+        id: editor-customization
+        title: Editor Customization
+        type: heading
+        level: 3
+        collapsed: true
+    - 
+        id: cc-fancy-cursor
+        title: Accented cursor
+        description: The editor cursor takes on your accent color
+        type: class-toggle
+    - 
+        id: cc-editor-heading-hash
+        title: Flush headings (source mode)
+        description: Shifts heading hashes so headings are aligned with the edge of the editor. This feature is currently incompatible with mobile.
+        type: class-toggle
+    - 
+        id: cc-lp-editor-heading-hash
+        title: Flush headings (live preview mode)
+        description: Shifts heading hashes so headings are aligned with the edge of the editor. This feature is currently incompatible with mobile.
+        type: class-toggle
+    - 
+        id: cc-em-strong
+        title: Bold and italics
+        description: Styles bold and italic formatting to be less prominent
+        type: class-toggle
+    - 
+        id: cc-hr
+        title: Horizontal rule (source mode)
+        description: Styles horizontal rules to span the width of the editor
+        type: class-toggle
+    -
+        id: cc-editor-list-bullets
+        title: Editor list bullets (source mode)
+        description: 'Replace *, -, + with a bullet character when creating lists'
+        type: class-toggle
+
+    - 
+        id: preview-customization
+        title: Preview Customization
+        type: heading
+        level: 3
+        collapsed: true
+    - 
+        id: cc-header-spacing
+        title: Dynamic Header Spacing
+        description: Applies the top and bottom header margins defined below, and adjusts spacing dynamically when the "Contextual Typography" plugin is active
+        type: class-toggle
+    -
+        id: cc-soft-wrap-code-blocks
+        title: Soft wrap code-blocks
+        type: class-toggle
+    - 
+        id: cc-seamless-embed
+        title: Seamless embed
+        description: Display embedded content seamlessly as a part of the containing document
+        type: class-toggle
+    - 
+        id: preview-bullet-size-adjust
+        title: Preview bullet size adjust
+        description: Increase or decrease preview mode bullet sizes. The default is 100%, or no change.
+        type: variable-number
+        default: 100
+        format: '%'
+
 
     - 
         id: level-1-headings
         title: Level 1 Headings
         type: heading
-        level: 3
+        level: 4
         collapsed: true
     - 
         id: h1-size
@@ -533,7 +387,7 @@ settings:
         id: level-2-headings
         title: Level 2 Headings
         type: heading
-        level: 3
+        level: 4
         collapsed: true
     - 
         id: h2-size
@@ -576,7 +430,7 @@ settings:
         id: level-3-headings
         title: Level 3 Headings
         type: heading
-        level: 3
+        level: 4
         collapsed: true
     - 
         id: h3-size
@@ -619,7 +473,7 @@ settings:
         id: level-4-headings
         title: Level 4 Headings
         type: heading
-        level: 3
+        level: 4
         collapsed: true
     - 
         id: h4-size
@@ -662,7 +516,7 @@ settings:
         id: level-5-headings
         title: Level 5 Headings
         type: heading
-        level: 3
+        level: 4
         collapsed: true
     - 
         id: h5-size
@@ -705,7 +559,7 @@ settings:
         id: level-6-headings
         title: Level 6 Headings
         type: heading
-        level: 3
+        level: 4
         collapsed: true
     - 
         id: h6-size
@@ -748,7 +602,7 @@ settings:
         id: icons
         title: Icons
         type: heading
-        level: 2
+        level: 3
         collapsed: true
     - 
         id: cc-no-custom-icons
@@ -792,33 +646,35 @@ settings:
         min: 50
         max: 150
         step: 1
+
 */
-/*-----------------------------*/
-/*          CSS Variables      */
-/*-----------------------------*/
+/*-------------------------------------*/
+/*          CSS Variables              */
+/*-------------------------------------*/
 :root {
-  --font-ui-smaller: 14px;
-  --font-ui-small: 16px;
-  --font-ui-medium: 18px;
-  --font-ui-large: 20px;
-  --font-text-size: 18px;
-  --font-size-normal: var(--font-text-size);
-  --code-size: var(--font-ui-small);
-  --font-size-side-dock: var(--font-text-size);
-  --font-size-side-dock-title: var(--font-text-size);
-  --font-size-status-bar: var(--font-text-size);
-  --table-header-size: var(--font-text-size);
+  --font-size-normal: 18px;
+  --font-size-code: 18px;
+  --font-size-side-dock: 18px;
+  --font-size-side-dock-title: 18px;
+  --font-size-status-bar: 18px;
   --font-size-h1: 30px;
   --font-size-h2: 25px;
   --font-size-h3: 21px;
   --font-size-h4: 20px;
   --font-size-h5: 19px;
   --font-size-h6: 18px;
-  --font-family-editor: IBM Plex Mono, Menlo, Monaco, "Courier New", monospace;
-  --font-text: Karla, "Avenir Next", Helvetica, Arial, sans-serif;
-  --font-family-preview: Karla, "Avenir Next", Helvetica, Arial, sans-serif;
-  --font-family-preview-heading: Rubik, "Avenir Next", Helvetica, Arial, sans-serif;
-  --line-width: 900px;
+  --font-ui-smaller: 14px;
+  --font-ui-small: 16px;
+  --font-ui-medium: 18px;
+  --font-ui-large: 20px;
+  --font-family-editor: IBM Plex Mono, Menlo, Monaco, Courier New, monospace;
+  --font-text: Karla, Avenir Next, Helvetica, Arial, sans-serif;
+  --font-family-preview: Karla, Avenir Next, Helvetica, Arial, sans-serif;
+  --font-family-preview-heading: Rubik, Avenir Next, Helvetica, Arial, sans-serif;
+  --primary-background: #1B1A23;
+  --secondary-background: #22212C;
+  --tertiary-background: #353243;
+  --quaternary-background: #423F50;
   --white: #F8F8F3;
   --gray-1: #586e75;
   --gray-2: #D5D4DE;
@@ -836,19 +692,18 @@ settings:
 }
 .theme-light,
 .theme-dark {
-  --background-primary: hsl(207deg, 95%, 5%);
-  --background-primary-alt: hsl(210deg, 95%, 6%);
-  --background-secondary: hsl(200deg, 95%, 5%);
-  --background-secondary-alt: hsl(203deg, 95%, 6%);
-  --background-accent: rgba(14, 210, 247, 0.25);
-  --background-modifier-border: rgba(14, 210, 247, 0.05);
+  --background-primary: hsl(207deg, 95%, 8%);
+  --background-primary-alt: #011c32;
+  --background-secondary: #011c32;
+  --background-secondary-alt: #02223c;
+  --background-accent: #f8f8f2;
+  --background-modifier-border: #f8f8f2;
   --background-modifier-box-shadow: rgba(0, 0, 0, 0.3);
-  --background-modifier-success: #50fa7b;
-  --background-modifier-error: #3d0000;
+  --background-modifier-success: #50fa7b; /*not sure*/
+  --background-modifier-error: #3d0000; /*not sure*/
   --background-modifier-error-rgb: 61, 0, 0;
   --background-modifier-error-hover: #470000;
   --background-modifier-cover: rgba(0, 0, 0, 0.6);
-  --table-border-color: #f8f8f2;
   --text-accent: #ffeb95;
   --text-accent-hover: #8be9fd;
   --text-sub-accent: #f4569d;
@@ -858,10 +713,18 @@ settings:
   --text-normal: #f8f8f2;
   --text-muted: #f8f8f2;
   --text-faint: #7fdbca;
-  --text-highlight-bg: hsla(101deg, 100%, 12%, 0.8);
-  --text-selection: #6272a4;
+  --text-highlight-bg: hsla(61deg, 100%, 32%, 0.8);
+  --text-error: #ff79c6;
+  --text-error-hover: #ff79c6;
+  --text-selection: #6272a4; /* Chromium process this color with alpha channel */
+  --text-on-accent: #bd93f9;
   --interactive-accent: rgba(14, 210, 247, 0.5);
   --interactive-accent-hover: rgba(14, 210, 247, 0.8);
+  --interactive-before: #5e6565;
+  --interactive-accent-rgb: #3dd7fb;
+  --scrollbar-active-thumb-bg: #282a36;
+  --scrollbar-bg: #282a36;
+  --scrollbar-thumb-bg: #282a36;
   --text-title-h1: #ff79c6;
   --text-title-h2: #82aaff;
   --text-title-h3: #c5e478;
@@ -871,11 +734,10 @@ settings:
   --inline-code: #bd93f9;
   --code-block: #8be9fd;
   --pre-code: #44475a;
+  --blockquote-border: #ffb86c;
   --vim-cursor: #ff5555;
-  --border-color: #2b2727;
-  --border-color-alt: #101014;
+  --border-color: #2b2727; /* also like transparent */
 }
-
 /*-------------------------------------*/
 /*      Search the following lines     */
 /*     to jump to specific section     */
@@ -888,13 +750,13 @@ settings:
 /*                tags                 */
 /*                link                 */
 /*               Cursor                */
-/* Basic format in EDITOR and PREVIEW  */
+/* basic format in EDITOR and PREVIEW  */
 /* Headings - EDITOR and PREVIEW       */
 /*         Code block in  Preview      */
 /*       Code block in Editor          */
 /*              Brackets               */
 /*             Blockquote              */
-/*               Table                 */
+/*               table                 */
 /*              Checkbox               */
 /*           html in editor            */
 /*              popover                */
@@ -908,20 +770,9 @@ settings:
 /*    at a rule line before ul list    */
 /*  Hide Scrollbar (recommend for mac) */
 /*-------------------------------------*/
-
-/************************/
-/* YAML IN PREVIEW MODE */
-/************************/
-
-/* Hide the metadata box at top of note in preview mode */
-.frontmatter-container {
-    display: none;
-}
-
 /**************************/
 /* CUSTOMIZED TAG COLOURS */
 /**************************/
-
 /* For preview mode */
 a.tag[href*="#todo"],
 a.tag[href*="#待完成"] {
@@ -932,96 +783,73 @@ a.tag[href*="#待完成"] {
 .cm-s-obsidian .CodeMirror-line span.cm-tag-todo:not(.cm-formatting-hashtag) {
   color: #ee6a96;
 }
-
 a.tag[href*="#working-draft"],
 a.tag[href*="#进行中"] {
   background-color: #4d3ca6;
   color: #fff;
 }
-
 .cm-s-obsidian .CodeMirror-line span.cm-tag-working-draft:not(.cm-formatting-hashtag) {
   color: #a897ff;
 }
-
 a.tag[href*="#notes"],
 a.tag[href*="#笔记"] {
   background-color: #17b978;
   color: #fff;
 }
-
 .cm-s-obsidian .CodeMirror-line span.cm-tag-notes:not(.cm-formatting-hashtag) {
   color: #45e0a2;
 }
-
 a.tag[href*="#knowledge"],
 a.tag[href*="#知识"] {
   background-color: #005792;
   color: #fff;
 }
-
 .cm-s-obsidian .CodeMirror-line span.cm-tag-knowledge:not(.cm-formatting-hashtag) {
   color: #6cbdf3;
 }
-
 a.tag[href*="#writing"],
 a.tag[href*="#文章"] {
   background-color: #f95959;
   color: #fff;
 }
-
 .cm-s-obsidian .CodeMirror-line span.cm-tag-writing:not(.cm-formatting-hashtag) {
   color: #ff7a7a;
 }
-
 a.tag[href*="#ideas"],
 a.tag[href*="#想法"] {
   background-color: #ffc93c;
   color: #000;
 }
-
 .cm-s-obsidian .CodeMirror-line span.cm-tag-ideas:not(.cm-formatting-hashtag) {
   color: #ffdc82;
 }
-
 /**************************************/
 /* GENERAL STYLES                     */
 /**************************************/
 body {
-  --code-size-code: 16px;
-  --file-header-font-size: 18px;
-  --nav-item-size: 18px;
-  --popover-font-size: 14px;
-  --vault-name-font-size: 18px;
   font-weight: var(--body-font-weight, normal);
   font-size: var(--font-size-normal);
 }
-
 ::-webkit-scrollbar {
   opacity: 1;
   width: 0.6rem;
 }
-
 ::-webkit-scrollbar-thumb {
   background-color: var(--background-modifier-border);
   border-radius: 999px;
 }
-
 ::-webkit-scrollbar-track,
 ::-webkit-scrollbar-track-piece {
   background: var(--background-secondary);
 }
-
 .markdown-preview-view .internal-link.is-unresolved {
   opacity: 0.7;
 }
-
 .theme-dark .notice {
   background-color: var(--background-primary-alt);
   color: var(--text-accent);
 }
-
 /** NAVIGATION / SIDE-DOCK **/
-
 .nav-folder-collapse-indicator {
   color: var(--text-accent);
 }
@@ -1033,7 +861,6 @@ body {
 .nav-folder.is-active > .nav-folder-collapse-indicator {
   color: var(--text-accent);
 }
-
 /** Side-dock icons **/
 .side-dock-ribbon-tab,
 .side-dock-ribbon-action,
@@ -1050,7 +877,6 @@ body {
   opacity: 1;
   color: var(--text-accent);
 }
-
 /** Left side menu -- collapsed **/
 .workspace-ribbon.is-collapsed {
   background-color: var(--background-primary-alt);
@@ -1058,30 +884,17 @@ body {
 /** Left side menu border **/
 .workspace-ribbon.mod-left.is-collapsed,
 .workspace-ribbon.mod-right.is-collapsed {
-  border-color: var(--border-color-alt);
+  border-color: var(--editor-border-color);
 }
-
 /** Navigation tabs **/
 .workspace-tab-header.is-active {
   opacity: 1;
   color: var(--text-accent);
 }
-
-.nav-file-title.is-active,
-.nav-folder-title.is-active {
-  background: var(--background-modifier-border);
-  border: 1px solid var(--background-accent);
-}
-
+/** File and Folder Lists **/
 body:not(.is-grabbing) .nav-file-title:hover,
 body:not(.is-grabbing) .nav-folder-title:hover {
-  background: var(--background-modifier-border);
   border: 1px solid var(--interactive-accent-hover);
-}
-
-/** File and Folder lists **/
-body:not(.is-grabbing) .nav-file-title:hover,
-body:not(.is-grabbing) .nav-folder-title:hover {
   color: var(--text-accent);
 }
 /** File and Folder list active arrow **/
@@ -1089,33 +902,28 @@ body:not(.is-grabbing) .nav-file-title:hover .nav-folder-collapse-indicator,
 body:not(.is-grabbing) .nav-folder-title:hover .nav-folder-collapse-indicator {
   color: var(--text-accent);
 }
-/** File and Folder list main title **/
+/** Folder List main title **/
 .nav-folder.mod-root > .nav-file-title,
 .nav-folder.mod-root > .nav-folder-title {
   color: var(--text-accent);
 }
-
 /** View Header title **/
 .workspace-leaf.mod-active .view-header-title {
   color: var(--text-accent);
 }
-
 /** Little tag styles (at links) **/
 .pane-list-item:hover .pane-list-item-ending-flair {
   background-color: var(--background-secondary);
   color: var(--text-accent);
 }
-
 /** SETTINGS STYLES **/
 .checkbox-container.is-enabled {
   background-color: rgba(14, 210, 247, 0.7);
 }
-
 .workspace-drop-overlay {
   background-color: var(--background-primary-alt);
 }
-
-/* Except list markers */
+/* except list markers */
 /* code block backticks */
 /* optionally header hashes */
 span.cm-formatting-list,
@@ -1123,7 +931,6 @@ span.cm-formatting-code-block.cm-hmd-codeblock,
 span.cm-formatting-header {
   display: inline !important;
 }
-
 /***************************************/
 /*  resize-handle and borders          */
 /***************************************/
@@ -1151,7 +958,7 @@ span.cm-formatting-header {
   font-size: var(--font-size-status-bar);
   background-color: var(--background-secondary-alt);
   border-top: 0px;
-  border-color: var(--border-color-alt);
+  border-color: #101014;
   color: var(--text-faint);
   position: absolute;
   margin: auto;
@@ -1165,12 +972,10 @@ span.cm-formatting-header {
   opacity: 0.4;
   transition: 0.5s;
 }
-
 .status-bar:hover {
   opacity: 1;
   transition: 0.2s;
 }
-
 .document-search-container {
   border-top: 0px;
   border-right: 0px;
@@ -1225,23 +1030,23 @@ a:not(.internal-link) {
   opacity: 60% !important;
 }
 /**************************************/
-/* Basic format in EDITOR and PREVIEW */
+/* basic format in EDITOR and PREVIEW */
 /**************************************/
-/* Font for everything outside of editor/preview panes */
+/* font for everything outside of editor/preview panes */
 .app-container {
   font-family: var(--font-family-preview);
 }
-/* Set the text selection color for preview mode */
+/* set the text selection color for preview mode */
 ::selection {
   background-color: var(--text-selection);
 }
-/* Normal text outside of headings and code of editor */
+/* normal text outside of headings and code of editor */
 .cm-s-obsidian,
 .mod-single-child .cm-s-obsidian {
   font-family: var(--font-family-editor);
   font-size: var(--font-size-normal);
 }
-/* Bold in preview and editor */
+/* bold in preview and editor */
 .cm-strong,
 strong {
   -webkit-background-clip: text;
@@ -1252,7 +1057,7 @@ strong {
   background-color: #7aa2f7;
   background-image: linear-gradient(62deg, #87c2fd 0%, #dcb9fc 100%) !important;
 }
-/* Emphasis in preview and editor */
+/* emphasis in preview and editor */
 em,
 .cm-em {
   color: var(--text-italic-color);
@@ -1261,16 +1066,15 @@ em,
 .cm-em.cm-strong {
   color: var(--text-italic-bold-color);
 }
-/* Strikethrough in preview and editor */
+/* strikethrough in preview and editor */
 s,
 .cm-strikethrough {
   color: var(--text-muted);
 }
-/* List in editor */
+/* list in editor */
 .cm-s-obsidian span.cm-formatting-list {
   color: var(--text-normal) !important;
 }
-
 /** hr styles -- PREVIEW MODE */
 .cm-line hr,
 .markdown-preview-view hr {
@@ -1284,7 +1088,6 @@ s,
   border-width: 1px;
   border-image-source: linear-gradient(to right, transparent, var(--text-accent), transparent);
 }
-
 .cm-line hr::after,
 .markdown-preview-view hr::after {
   content: "§";
@@ -1317,7 +1120,7 @@ img:hover {
 /* code blocks in preview */
 pre code {
   font-family: monaco !important;
-  font-size: var(--code-size) !important;
+  font-size: var(--font-size-code) !important;
   padding: 6px !important;
   line-height: normal;
   display: block;
@@ -1329,7 +1132,7 @@ pre code {
 }
 /* font-size of in-line block for preview */
 .markdown-preview-view code {
-  font-size: var(--code-size);
+  font-size: var(--font-size-code);
 }
 /* remove the shadow that typically affect light mode */
 .theme-dark code[class*=language-],
@@ -1340,7 +1143,6 @@ pre code {
   color: var(--text-faint) !important;
   background-color: var(--pre-code);
 }
-
 /***************************************/
 /*      Language (Dark mode only)      */
 /***************************************/
@@ -1362,107 +1164,49 @@ pre[class*=language-]:before {
   padding: 0.1em 0.8em;
   z-index: 10;
 }
-
 pre[class$=markdown]:before,
 pre[class$=md]:before {
   content: "Markdown";
 }
-
 pre[class$=javascript]:before,
 pre[class$=js]:before {
   content: "JavaScript";
 }
-
 pre[class$=typescript]:before,
 pre[class$=ts]:before {
   content: "typescript";
 }
-
-pre[class$=code]:before {
-  content: "code";
-}
-
 pre[class$=text]:before {
   content: "text";
 }
-
 pre[class$=html]:before {
   content: "html";
 }
-
 pre[class$=css]:before {
   content: "css";
 }
-
 pre[class$=ejs]:before {
   content: "ejs";
 }
-
 pre[class$=vue]:before {
   content: "vue";
 }
-
 pre[class$=react]:before {
   content: "react";
 }
-
 pre[class$=shell]:before {
   content: "Shell";
 }
-
 pre[class$=json]:before {
   content: "Json";
 }
-
-pre[class$=yaml]:before {
-  content: "yaml";
-}
-
 pre[class$=python]:before {
   content: "python";
 }
-
-pre[class$=lua]:before {
-  content: "lua";
-}
-
-pre[class$=php]:before {
-  content: "php";
-}
-
-pre[class$=ruby]:before {
-  content: "ruby";
-}
-
-pre[class$=rust]:before {
-  content: "rust";
-}
-
-pre[class$=sql]:before {
-  content: "sql";
-}
-
-pre[class$=toml]:before {
-  content: "toml";
-}
-
-pre[class$=haskell]:before {
-  content: "haskell";
-}
-
-pre[class$=ini]:before {
-  content: "ini";
-}
-
-pre[class$=java]:before {
-  content: "java";
-}
-
 .theme-dark :not(pre) > code[class*=language-],
 .theme-dark pre[class*=language-] {
   background-color: var(--background-secondary);
 }
-
 code[class*=language-],
 pre[class*=language-] {
   color: #ccc;
@@ -1475,17 +1219,14 @@ pre[class*=language-] {
   word-break: normal;
   word-wrap: normal;
   line-height: 1.5;
-
   -moz-tab-size: 4;
   -o-tab-size: 4;
   tab-size: 4;
-
   -webkit-hyphens: none;
   -moz-hyphens: none;
   -ms-hyphens: none;
   hyphens: none;
 }
-
 pre[class*=language-]::-moz-selection,
 pre[class*=language-] ::-moz-selection,
 code[class*=language-]::-moz-selection,
@@ -1493,7 +1234,6 @@ code[class*=language-] ::-moz-selection {
   text-shadow: none;
   background-color: #5a5f80;
 }
-
 pre[class*=language-]::selection,
 pre[class*=language-] ::selection,
 code[class*=language-]::selection,
@@ -1501,87 +1241,68 @@ code[class*=language-] ::selection {
   text-shadow: none;
   background-color: #5a5f80;
 }
-
 @media print {
   code[class*=language-],
   pre[class*=language-] {
     text-shadow: none;
   }
 }
-
 /* Code blocks */
 :not(pre) > code[class*=language-],
 pre[class*=language-] {
   background: rgb(40, 41, 54);
 }
-
 /* Inline code */
 :not(pre) > code[class*=language-] {
   padding: 4px 7px;
   border-radius: 0.3em;
   white-space: normal;
 }
-
 .language-cpp .theme-dark .token.string {
   color: #8be9fd;
 }
-
 .language-c .theme-dark .token.string {
   color: #8be9fd;
 }
-
 .theme-dark .language-css .token.selector {
   color: rgb(80, 250, 123);
 }
-
 .theme-dark .language-css .token.property {
   color: rgb(255, 184, 108);
 }
-
 .language-java span.theme-dark .token.class-name {
   color: #8be9fd;
 }
-
 .language-java .theme-dark .token.class-name {
   color: #8be9fd;
 }
-
 .language-markup .theme-dark .token.attr-value {
   color: rgb(102, 217, 239);
 }
-
 .language-markup .theme-dark .token.tag {
   color: rgb(80, 250, 123);
 }
-
 .language-objectivec .theme-dark .token.property {
   color: #66d9ef;
 }
-
 .language-objectivec .theme-dark .token.string {
   color: #50fa7b;
 }
-
 .language-php .theme-dark .token.boolean {
   color: #8be9fd;
 }
-
 .language-php .theme-dark .token.function {
   color: #ff79c6;
 }
-
 .language-php .theme-dark .token.keyword {
   color: #66d9ef;
 }
-
 .language-ruby .theme-dark .token.symbol {
   color: #8be9fd;
 }
-
 .language-ruby .theme-dark .token.class-name {
   color: #cfcfc2;
 }
-
 /***************************************/
 /*              Brackets               */
 /***************************************/
@@ -1596,7 +1317,6 @@ pre[class*=language-] {
   color: var(--text-normal) !important;
   font-style: italic;
 }
-
 /* blockquote style overwrite */
 .markdown-preview-view blockquote {
   position: relative;
@@ -1613,7 +1333,6 @@ pre[class*=language-] {
   background: linear-gradient(135deg, rgba(32, 28, 41, 0.45), #100e17);
   font-style: italic;
 }
-
 .markdown-preview-view blockquote::before {
   content: "";
   position: absolute;
@@ -1632,46 +1351,9 @@ pre[class*=language-] {
   width: 25%;
   background: linear-gradient(90deg, rgba(13, 185, 215, 0.5), #15131c);
 }
-
 /***************************************/
-/*             Image                   */
+/*             table                   */
 /***************************************/
-.markdown-preview-view img {
-  display: block;
-  margin-top: 20pt;
-  margin-bottom: 20pt;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%; /* experiment with values */
-  transition: transform 0.25s ease;
-}
-
-.markdown-preview-view img:hover {
-  -webkit-transform: scale(1.15); /* experiment with values */
-  transform: scale(2);
-}
-
-/***************************************/
-/*             Table                   */
-/*  Add the following to any documents */
-/*  in which tables should be centered */
-/*                                     */
-/*        ---                          */
-/*        cssclass: t-c                */
-/*        ---                          */
-/*                                     */
-/*  Add the following to any documents */
-/*  in which tables should be widened  */
-/*                                     */
-/*        ---                          */
-/*        cssclass: t-w                */
-/*        ---                          */
-/*                                     */
-/***************************************/
-
-.table-view-table tr {
-  border-bottom: 1px solid;
-}
 th {
   font-weight: 800 !important;
 }
@@ -1680,7 +1362,7 @@ th {
   background-color: var(--background-secondary) !important;
 }
 thead {
-  border-bottom: 3px solid var(--table-border-color);
+  border-bottom: 3px solid var(--background-modifier-border);
 }
 .table {
   padding: 4px;
@@ -1691,18 +1373,6 @@ thead {
   border-bottom-right-radius: 4px;
   border-bottom-left-radius: 4px;
 }
-
-/*Table Centered*/
-.t-c table {
-  margin-left: auto;
-  margin-right: auto;
-}
-
-/*Table Widened*/
-.t-w table {
-  width: 100%;
-}
-
 /***************************************/
 /*              popover                */
 /***************************************/
@@ -1715,7 +1385,7 @@ thead {
 /***************************************/
 /* search result in backlink or file search */
 .search-result-file-title {
-  font-size: var(--font-size-normal);
+  font-size: 18px;
 }
 .search-result-file-matches,
 .search-empty-state {
@@ -1750,6 +1420,7 @@ thead {
 .markdown-preview-view .markdown-embed-content > :last-child {
   margin-bottom: 0;
 }
+/*remove the following two line, you will get border and scroll*/
 .markdown-preview-view .markdown-embed {
   border: none;
   padding: 0;
@@ -1766,59 +1437,35 @@ thead {
 .markdown-embed-link:hover {
   color: var(--text-accent) !important;
 }
-.markdown-rendered button.copy-code-button {
-  margin: 6px;
-  padding: 16px 8px;
-  height: auto;
-  background-color: transparent;
-  box-shadow: none;
-  color: var(--text-muted);
-  font-size: var(--font-ui-smaller);
-  font-family: var(--font-interface);
-  position: absolute;
-  top: 0;
-  right: 0;
-}
 /***************************************/
-/*             Graph View              */
+/*             graph view              */
 /***************************************/
-/* Circle Stroke */
-/* Line When Hover */
 .graph-view.color-circle,
+.graph-view.color-fill-highlight,
 .graph-view.color-line-highlight {
-  color: var(--cyan) !important;
-  border: 0;
-}
-/* Circle When Hover */
-.graph-view.color-fill-highlight {
-  color:var(--green);
+  color: var(--text-accent) !important;
 }
 .graph-view.color-text {
-  color:var(--yellow);
+  color: #00ffff;
 }
 .graph-view.color-line {
   color: #6272a4;
 }
-/* Circle When Not Hover */
 .graph-view.color-fill {
-  color: var(--cyan);
+  color: var(--text-muted);
 }
-/* Arrows */
 .theme-light .graph-view.color-arrow,
 .theme-dark .graph-view.color-arrow {
   color: #50fa7b;
 }
-/* Tags */
 .theme-light .graph-view.color-fill-tag,
 .theme-dark .graph-view.color-fill-tag {
   color: #ffb86c;
 }
-/* Attachments */
 .theme-light .graph-view.color-fill-attachment,
 .theme-dark .graph-view.color-fill-attachment {
   color: #ff5555;
 }
-/* Circle When Link Unresolved */
 .theme-light .graph-view.color-fill-unresolved,
 .theme-dark .graph-view.color-fill-unresolved {
   color: #6272a4;
@@ -1826,9 +1473,8 @@ thead {
 .workspace-leaf-content[data-type=graph] .view-content {
   background-color: var(--background-primary);
 }
-
 /***************************************/
-/*            Settings                 */
+/*            settings                 */
 /***************************************/
 .modal.mod-settings button:not(.mod-cta):hover {
   background-color: var(--interactive-accent-hover);
@@ -1856,12 +1502,12 @@ thead {
 /*           width of content          */
 /***************************************/
 .markdown-source-view.is-readable-line-width .CodeMirror {
-  max-width: var(--line-width);
+  max-width: 900px;
   margin-left: auto;
   margin-right: auto;
 }
 .markdown-preview-view.is-readable-line-width .markdown-preview-section {
-  max-width: var(--line-width);
+  max-width: 900px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -1965,7 +1611,6 @@ thead {
   padding-left: 4% !important;
   padding-right: 2% !important;
 }
-
 /***************************************/
 /*    at a rule line before ul list    */
 /***************************************/
@@ -2014,8 +1659,7 @@ code {
   border-top-right-radius: 0 !important;
   cursor: pointer;
   color: var(--text-muted);
-/*font-size: 1rem; */
-  font-size: var(--font-size-side-dock);
+  font-size: 1rem;
   line-height: 20px;
   padding: 1px 20px 0 26px;
   position: relative;
@@ -2125,7 +1769,6 @@ ul .task-list-item ul::before {
   font-size: var(--font-size-h6);
   color: var(--text-title-h6);
 }
-
 /** Headings */
 .markdown-preview-view h1 {
   font-family: var(--font-family-preview-heading);
